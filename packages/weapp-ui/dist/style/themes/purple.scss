@@ -1,0 +1,44 @@
+/**
+ * Purple - 7FRESH 主题
+ */
+
+@import '../mixins/index.scss';
+
+/* The Color of 7FRESH Brand */
+$color-brand: #345B8F;
+$color-brand-light: #5274A0;
+$color-brand-dark: #27497C;
+
+/* 辅助色 */
+$color-success: #0C8;
+$color-error: #FA5B5B;
+$color-warning: #FFD400;
+$color-info: #4D88FF;
+
+/* 文本颜色 */
+$color-text-base: #1D1F2B;
+$color-text-title: #1D1F2B; // 文章标题
+
+/* 组件样式 */
+$mn-button-border-color-primary: transparent;
+$mn-button-bg: linear-gradient(90deg, #5274A0, #27497C 100%);
+
+$mn-message-bg-color: #95969F;
+
+$mn-tag-color: $color-text-base;
+$mn-tag-color-primary: $color-brand-light;
+$mn-tag-color-primary-active: $color-brand-light;
+$mn-tag-border-color: #BDBEC3;
+$mn-tag-bg-color: #FFF;
+$mn-tag-bg-color-primary: #E9F3FF;
+$mn-tag-bg-color-primary-active: #E9F3FF;
+
+$mn-range-track-bg-color: $color-brand-light;
+
+$mn-indexes-nav-color: $color-text-title;
+
+$mn-steps-bg-color-active: $color-brand-light;
+
+$mn-timeline-dot-border-color: $color-brand;
+
+$mn-calendar-day-color: $color-text-base;
