@@ -3,9 +3,10 @@
   "compilerOptions": {
     "target": "es2017",
     "module": "es6",
-    "outDir": "./dist"
+    "outDir": "./lib"
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "types/images.d.ts"
   ]
 }

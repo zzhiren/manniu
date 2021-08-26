@@ -2,8 +2,8 @@ import React, { Fragment } from 'react'
 import Taro from '@tarojs/taro'
 import classNames from 'classnames'
 import PropTypes, { InferProps } from 'prop-types'
-import { View, Image, Text, ITouchEvent } from '@tarojs/components'
-import { UtilsFile } from '@manniu/utils'
+import { View, Image, ITouchEvent } from '@tarojs/components'
+import { getFileSuffix, checkFileType } from '../../common/utils'
 import { IS_WEAPP, IS_WEB, IS_ALIPAY } from '../../env/env'
 import { MnFilePickerProps, MnFilePickerStates, OnAddFileItem, FileItem } from '../../../types/file-picker'
 import MnIcon from '../icon'
@@ -21,6 +21,18 @@ import Txt from './icon/txt.png'
 import Unknown from './icon/unknown.png'
 import Word from './icon/word.png'
 import Zip from './icon/zip.png'
+
+// const Audio = ''
+// const Video = ''
+// const Delete = ''
+// const Excel = ''
+// const Gif = ''
+// const PDF = ''
+// const PPT = ''
+// const Txt = ''
+// const Unknown = ''
+// const Word = ''
+// const Zip = ''
 
 const fileTypeIcon = {
   'audio': Audio,
@@ -54,8 +66,8 @@ const generateMatrix = (
   showAdd: boolean
 ): MatrixFile[][] => {
   files.forEach(v => {
-    v.fileType = UtilsFile.checkFileType(v.url, 'type')
-    v.suffix = UtilsFile.getFileSuffix(v.url)
+    v.fileType = checkFileType(v.url, 'type') as string
+    v.suffix = getFileSuffix(v.url)
   })
   const matrix: Array<MatrixFile>[] = []
   const length = showAdd ? files.length + 1 : files.length
@@ -79,23 +91,6 @@ const generateMatrix = (
     }
   }
   return matrix
-}
-
-/**
- * @desc 判断字符串长度，显示省略号
- * @param str
- * @param nameLength
- * @returns
- */
-const filterStr = (str: string, nameLength: number): string => {
-  // jpg, png, jpeg, mp4, mp3, avi,
-  // 最多容纳 nameLength 个字符加四个 .  的长度
-  if (typeof str === 'string' && str.length > nameLength) {
-    const arr = str.split('.')
-    const suffixLen = arr[arr.length - 1].length // 后缀的长度
-    return `${arr[0].substring(0, nameLength - suffixLen)}....${arr[arr.length - 1]}`
-  }
-  return str
 }
 
 export default class MnFilePicker extends React.Component<MnFilePickerProps, MnFilePickerStates> {
@@ -285,10 +280,10 @@ export default class MnFilePicker extends React.Component<MnFilePickerProps, MnF
                             src={action + v.url}
                           />
                           :
-                          <Image className='icon-file-type' src={fileTypeIcon[v.fileType]}/>
+                          <Image className='icon-file-type' src={fileTypeIcon[v.fileType as string]}/>
                         }
                       </View>
-                      {/* { showName && <View className='mn-file-picker__item-name'>{filterStr(v.name || v.url)}</View> } */}
+                       {/*{ showName && <View className='mn-file-picker__item-name'>{filterStr(v.name || v.url)}</View> } */}
                     </View>
                   ) : (
                     <View
@@ -342,9 +337,13 @@ MnFilePicker.defaultProps = {
   size: 50,
   fileType: ['chat', 'camera', 'album'],
   showRemove: false,
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   onAdd: (): void => {},
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   onRemove: (): void => {},
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   onFileClick: (): void => {},
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   onFail: (): void => {}
 }
 

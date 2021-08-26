@@ -130,6 +130,6 @@ export interface MnFilePickerProps extends MnComponent{
   onFail?: (msg: string) => void
 }
 
-declare const FilePicker: ComponentClass<MnFilePickerProps>
+declare const MnFilePicker: ComponentClass<MnFilePickerProps>
 
-export default FilePicker
+export default MnFilePicker

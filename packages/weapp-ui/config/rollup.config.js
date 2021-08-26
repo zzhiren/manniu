@@ -4,6 +4,7 @@ import RollupNodeResolve from '@rollup/plugin-node-resolve'
 import RollupCommonjs from '@rollup/plugin-commonjs'
 import RollupTypescript from 'rollup-plugin-typescript2'
 import RollupCopy from 'rollup-plugin-copy'
+import RoolupImage from '@rollup/plugin-image';
 import Package from '../package.json'
 
 const resolveFile = path => NodePath.resolve(__dirname, '..', path)
@@ -11,7 +12,6 @@ const resolveFile = path => NodePath.resolve(__dirname, '..', path)
 const externalPackages = [
   'react',
   'react-dom',
-  'taro-ui',
   '@tarojs/components',
   '@tarojs/runtime',
   '@tarojs/taro',
@@ -34,17 +34,15 @@ export default {
   ],
   external: externalPackages,
   plugins: [
-    /* 路径引入方式，使用后引入模块可以忽略 index.js */
     RollupNodeResolve({
       customResolveOptions: {
         moduleDirectory: 'node_modules'
       }
     }),
-    /* 将 commonjs 模块转换成 ES5 ES6 */
     RollupCommonjs({
       include: /\/node_modules\//
     }),
-    /* 将 json 文件转换成 ES6模块 */
+    RoolupImage(),
     RollupJson(),
     RollupTypescript({
       tsconfig: resolveFile('tsconfig.rollup.json')

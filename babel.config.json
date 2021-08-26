@@ -1,7 +1,7 @@
 {
   "overrides": [
     {
-      "include": "packages/**/**",
+      "include": "packages/taro-ui-docs/**",
       "presets": [
         [
           "@babel/preset-env",

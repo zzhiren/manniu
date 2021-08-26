@@ -1,7 +1,7 @@
 {
   "name": "@manniu/weapp-ui",
   "version": "0.0.2",
-  "description": "manniu weapp ui",
+  "description": "UI KIT for Taro",
   "module": "dist/index.esm.js",
   "main": "dist/index.js",
   "source": "src/index.ts",
@@ -11,11 +11,9 @@
   ],
   "types": "./types/index.d.ts",
   "keywords": [
-    "@manniu/weapp-ui",
-    "manniu",
-    "weapp-ui",
-    "ui",
-    "weapp"
+    "taro",
+    "taro-ui",
+    "ui"
   ],
   "files": [
     "lib",
@@ -49,7 +47,6 @@
     "clean": "rimraf .temp dist lib coverage"
   },
   "dependencies": {
-    "@manniu/utils": "file:../utils",
     "classnames": "^2.2.6",
     "dayjs": "^1.7.7",
     "lodash": "^4.17.10",
@@ -57,6 +54,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-image": "^2.1.1",
     "@rollup/plugin-json": "^4.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
     "@tarojs/components": "~3.0.2",
