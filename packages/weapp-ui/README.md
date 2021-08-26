@@ -1,11 +1,12 @@
 # `weapp-ui`
 
-> TODO: description
+安装
+> npm install @manniu/weapp-ui
 
-## Usage
+使用
+> import MnFilePicker from '@manniu/weapp-ui'
 
-```
-const weappUi = require('weapp-ui');
-
-// TODO: DEMONSTRATE API
-```
+组价
+* MnIcon
+* MnFilePicker
+* MnActionSheet
