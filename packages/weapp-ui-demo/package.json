@@ -39,7 +39,7 @@
   "author": "",
   "dependencies": {
     "@babel/runtime": "^7.7.7",
-    "@manniu/weapp-ui": "file:../weapp-ui",
+    "@manniu/weapp-ui": "0.0.5",
     "@tarojs/components": "3.2.13",
     "@tarojs/react": "3.2.13",
     "@tarojs/runtime": "3.2.13",

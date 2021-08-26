@@ -11,8 +11,9 @@
   ],
   "types": "./types/index.d.ts",
   "keywords": [
-    "taro",
-    "taro-ui",
+    "manniu",
+    "weapp",
+    "weapp-ui",
     "ui"
   ],
   "files": [
@@ -24,12 +25,11 @@
   "homepage": "",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/Zzhiren/manniu"
   },
   "license": "MIT",
   "publishConfig": {
-    "access": "public",
-    "tag": "next"
+    "access": "public"
   },
   "scripts": {
     "dev": "yarn run dev:lib",
@@ -79,5 +79,5 @@
     "react": ">=16.13.0",
     "react-dom": ">=16.13.0"
   },
-  "gitHead": "1231e077f9bf13c62ea8b7f739de16412b671cc5"
+  "gitHead": "7229f8587b6703019cb5005f258ed2915d63705a"
 }
