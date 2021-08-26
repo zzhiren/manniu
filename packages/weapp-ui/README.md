@@ -6,7 +6,7 @@
 使用
 > import MnFilePicker from '@manniu/weapp-ui'
 
-组价
+组件
 * MnIcon
 * MnFilePicker
 * MnActionSheet

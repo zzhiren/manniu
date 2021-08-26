@@ -1,11 +1,7 @@
 # `utils`
 
-> TODO: description
+安装
+> npm install @manniu/utils
 
-## Usage
-
-```
-const utils = require('utils');
-
-// TODO: DEMONSTRATE API
-```
+使用
+> import { UtilsFiles } from '@manniu/utils'
