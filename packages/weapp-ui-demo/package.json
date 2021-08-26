@@ -8,6 +8,9 @@
     "typescript": true,
     "css": "sass"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build:weapp": "taro build --type weapp",
     "build:swan": "taro build --type swan",
