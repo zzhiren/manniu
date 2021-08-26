@@ -77,5 +77,6 @@
     "@tarojs/react": ">=3",
     "react": ">=16.13.0",
     "react-dom": ">=16.13.0"
-  }
+  },
+  "gitHead": "9b1ccddb599b61de8ff82747011aea079e7f6a0c"
 }
