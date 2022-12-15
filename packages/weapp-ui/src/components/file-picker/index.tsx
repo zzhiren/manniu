@@ -22,18 +22,6 @@ import Unknown from './icon/unknown.png'
 import Word from './icon/word.png'
 import Zip from './icon/zip.png'
 
-// const Audio = ''
-// const Video = ''
-// const Delete = ''
-// const Excel = ''
-// const Gif = ''
-// const PDF = ''
-// const PPT = ''
-// const Txt = ''
-// const Unknown = ''
-// const Word = ''
-// const Zip = ''
-
 const fileTypeIcon = {
   'audio': Audio,
   'video': Video,
@@ -47,8 +35,6 @@ const fileTypeIcon = {
   'excel': Excel,
 }
 
-
-// import './index.scss';
 interface MatrixFile extends Partial<File> {
   type?: 'blank' | 'btn'
   url: string
@@ -56,7 +42,6 @@ interface MatrixFile extends Partial<File> {
   fileType?: string
   /* 文件后缀 */
   suffix?: string
-  // uuid: string
 }
 
 // 生成 jsx 二维矩阵
@@ -247,9 +232,9 @@ export default class MnFilePicker extends React.Component<MnFilePickerProps, MnF
     const rowLength = length <= 0 ? 1 : length
     // 行数
     const matrix = generateMatrix(files as MatrixFile[], rowLength, showAdd)
-    const rootCls = classNames('mn-image-picker', className)
+    const rootClass = classNames('mn-file-picker', className)
     return (
-      <View className={rootCls}>
+      <View className={rootClass}>
         { matrix.length > 0 || showAdd ?
           <Fragment>
             { Array.isArray(matrix) && matrix.map((row, index) => (

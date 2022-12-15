@@ -6,7 +6,7 @@ node_modules/
 .idea
 
 # Build outputs
-packages/taro-ui/lib/
+packages/weapp-ui/lib/
 packages/**/dist/
 
 # Test files
@@ -19,3 +19,4 @@ test/__mock__/
 git_stats/
 yarn-offline/
 docs/
+packages/weapp-ui/

@@ -1,6 +1,6 @@
 import { CSSProperties } from 'react'
 
-export interface MnComponent {
+interface MnComponent {
   className?: string
 
   customStyle?: string | CSSProperties

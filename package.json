@@ -52,7 +52,6 @@
     "stylelint-scss": "^3.16.0",
     "typescript": "~3.7.2"
   },
-
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": "eslint --quiet --cache --fix",
     "src/**/*.scss": "stylelint --syntax scss --fix"

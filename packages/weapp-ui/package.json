@@ -34,7 +34,7 @@
   "scripts": {
     "dev": "yarn run dev:lib",
     "dev:lib": "tsc --project ./tsconfig.build.json --watch --incremental",
-    "build": "yarn run build:rollup && yarn run build:lib",
+    "build": "yarn run build:rollup  --watch --incremental && yarn run build:lib  --watch --incremental",
     "build:lib": "tsc --project ./tsconfig.build.json",
     "build:rollup": "rollup --config ./config/rollup.config.js",
     "prepublishOnly": "yarn run clean && yarn run build",
@@ -79,5 +79,5 @@
     "react": ">=16.13.0",
     "react-dom": ">=16.13.0"
   },
-  "gitHead": "288b781737091e6a1d41e1ffa01a0ee737137738"
+  "gitHead": "8836608ad49b775e997f6dc63fc2ca5994d1ceac"
 }

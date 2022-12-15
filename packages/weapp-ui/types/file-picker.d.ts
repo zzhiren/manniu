@@ -53,7 +53,7 @@ export interface MnFilePickerProps extends MnComponent{
   /**
    * 图片显示mode，对应 Image 标签的 mode 属性
    */
-  imageMode: 'scaleToFill' | 'aspectFit' | 'aspectFill' | 'widthFix' | 'top' | 'bottom' | 'center' | 'left' | 'right' | 'top left' | 'top right' | 'bottom left' | 'bottom right'
+  imageMode?: 'scaleToFill' | 'aspectFit' | 'aspectFill' | 'widthFix' | 'top' | 'bottom' | 'center' | 'left' | 'right' | 'top left' | 'top right' | 'bottom left' | 'bottom right'
   /**
    * 是否显示文件名称
    * @default false

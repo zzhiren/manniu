@@ -8,13 +8,21 @@ const list = [
     name: 'Icon'
   },
   {
+    url: '/pages/basic/cropper/index',
+    name: 'Cropper'
+  },
+  {
     url: '/pages/form/file-picker/index',
     name: 'FilePicker'
+  },
+  {
+    url: '/pages/basic/image-cropper/index',
+    name: 'ImageCropper'
   }
 ]
 
 export default class Index extends React.Component {
-  private routerTo (url: string) {
+  private static routerTo (url: string) {
     Taro.navigateTo({
       url
     })
@@ -25,7 +33,7 @@ export default class Index extends React.Component {
       <View className='index'>
         {
           list.map(v => (
-            <View onClick={() => this.routerTo(v.url)} key={v.url}>{v.name}</View>
+            <View onClick={() => Index.routerTo(v.url)} key={v.url}>{v.name}</View>
           ))
         }
       </View>

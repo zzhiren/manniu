@@ -1,0 +1,33 @@
+{
+  "name": "weapp-router",
+  "version": "0.0.0",
+  "description": "Weapp Router",
+  "keywords": [
+    "weapp",
+    "router",
+    "manniu"
+  ],
+  "author": "Zzhiren <zzhirensos@163.com>",
+  "homepage": "https://github.com/Zzhiren/manniu#readme",
+  "license": "ISC",
+  "module": "lib/index.esm.js",
+  "main": "lib/index.js",
+  "source": "src/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zzhiren/manniu.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/Zzhiren/manniu/issues"
+  }
+}

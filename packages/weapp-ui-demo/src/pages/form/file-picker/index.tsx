@@ -7,7 +7,7 @@ const action = 'https://manniu-zbboss-test.oss-cn-shanghai.aliyuncs.com/'
 
 export default class FilePicker extends React.Component<{},
   {
-    files: []
+    files: Array<{url: string}>
   }
   > {
   public constructor (props) {
